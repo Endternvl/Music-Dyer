@@ -15,7 +15,7 @@ Why you should choose **MUSIC DYER?** It's because very easy to setup and easy t
 If you are using website like [GLITCH](https://glitch.com) or [REPLIT](https://replit.com) do like me.
 **GLITCH SETUP**
 just make a .env file and fill: `TOKEN=YOUR_BOT_TOKEN`
-Then you're done! ah, also, you can change the prefix in [config.json](https://github.com/Endternvl/Music-Dyer/config.json)
+Then you're done! ah, also, you can change the prefix in [config.json](https://github.com/Endternvl/Music-Dyer/blob/main/config.json)
 **REPL SETUP**
 In console, do `npm i`
 then create a file with the name, `.env` and fill it using= `TOKEN=YOUR_BOT_TOKEN`
