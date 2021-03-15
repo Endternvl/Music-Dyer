@@ -22,6 +22,7 @@ then create a file with the name, `.env` and fill it using= `TOKEN=YOUR_BOT_TOKE
 and to start, do `node index.js`
 
 - Codey Setup
+
 This setup is for coding apps like VISUAL STUDIO
 first in console, do `git clone https://github.com/Endternvl/Music-Dyer.git`
 then after you clone it, do `cd Music-Dyer` or where the index.js place is.
