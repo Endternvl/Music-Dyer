@@ -7,11 +7,12 @@ module.exports = {
   description: "To play songs :D",
   usage: "<song_name>",
   aliases: ["p"],
+  category: "music",
 
   run: async function(client, message, args) {
     const channel = message.member.voice.channel;
     if (!channel) {
-      message.channel.send("I am sorry but you need to be in a voice channel before using this commamd");
+      message.channel.send("<a:music:820866573131710475> You must be in a **VOICE CHANNEL** to play music!");
     }
 
     if (!message.guild.me.hasPermission("CONNECT")) {
@@ -19,7 +20,7 @@ module.exports = {
         embed: {
           color: "FF0000",
           description:
-            "<:emoji_17:763367241327706118> I don't have permission to connect your vc!"
+            "<a:WrongCheck:819048042091118604> I don't have permission to connect your vc!"
         }
       });
     }
@@ -28,20 +29,20 @@ module.exports = {
         embed: {
           color: "FF0000",
           description:
-            "<:emoji_17:763367241327706118>I need speak permission for playing music!"
+            "<a:WrongCheck:819048042091118604> I dont have permission to speak in voice channel!"
         }
       });
     }
     var searchString = args.join(" ");
     if (!searchString) {
-      message.channel.send("<:emoji_17:763367241327706118>provide us song' name or song's link");
+      message.channel.send("<a:WrongCheck:819048042091118604> please provide us song' name or song's link!");
     }
 
     var serverQueue = message.client.queue.get(message.guild.id);
 
     var searched = await yts.search(searchString);
     if (searched.videos.length === 0) {
-      message.channel.send("I can't find that song");
+      message.channel.send("I can't find that song! maybe typo");
     }
     var songInfo = searched.videos[0];
 
@@ -59,25 +60,21 @@ module.exports = {
     if (serverQueue) {
       serverQueue.songs.push(song);
       let thing = new MessageEmbed()
-        .setTitle("SONG HAS BEEN ADDED TO QUEUE")
+        .setTitle("<a:music:820866573131710475> SONG HAS BEEN ADDED TO QUEUE")
         .setImage(song.img)
         .setColor("ORANGE")
         .setDescription(
           `**SONG NAME**   
 [${song.title}](${song.url})     
-
 **DURACTION**
 ${song.duration}
-
 **REQUEST BY**
 [${message.author}]
-
-
         
         
         `
         )
-        .setFooter(`PARAS GAMING 🇮🇳`);
+        .setTimestamp()
       return message.channel.send(thing);
     }
 
@@ -108,15 +105,13 @@ ${song.duration}
         .on("error", error => console.error(error));
       dispatcher.setVolumeLogarithmic(queue.volume / 5);
       let thing = new MessageEmbed()
-        .setTitle("START PLAYING")
+        .setTitle("<a:music:820866573131710475> START PLAYING")
         .setDescription(
           `
 **SONG NAME**   
 [${song.title}](${song.url})     
-
 **DURACTION**
 ${song.duration}
-
 **REQUEST BY**
 [${message.author}]
 `
@@ -124,7 +119,7 @@ ${song.duration}
 
         .setImage(song.img)
         .setColor("GREEN")
-        .setFooter(`PARAS GAMING🇮🇳`);
+        .setTimestamp();
       queue.textChannel.send(thing);
     };
 
