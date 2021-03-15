@@ -34,3 +34,5 @@ then after you clone it, do `cd Music-Dyer` or where the index.js place is.
 then do `npm i`
 then create a file with the name, `.env` and fill it using= `TOKEN=YOUR_BOT_TOKEN`
 and to start, do `node index.js` in console
+
+> © Copyright [Music-Dyer](https://github.com/Endternvl/Music-Dyer/)
