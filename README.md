@@ -1,4 +1,4 @@
-# Discord.js Music-Dyer
+# Music-Dyer
 > Music bot with 10+ commands and command handler! feel free to fork it, and feel free to use it for your discord bot.
 
 ## What is "Music-Dyer"?
@@ -24,6 +24,7 @@ Then you're done! ah, also, you can change the prefix in [config.json](https://g
 
 In console, do `npm i`
 then create a file with the name, `.env` and fill it using= `TOKEN=YOUR_BOT_TOKEN`
+you can change the prefix in [config.json](https://github.com/Endternvl/Music-Dyer/blob/main/config.json)
 and to start, do `node index.js`
 
 - Codey Setup
@@ -33,6 +34,7 @@ first in console, do `git clone https://github.com/Endternvl/Music-Dyer.git`
 then after you clone it, do `cd Music-Dyer` or where the index.js place is.
 then do `npm i`
 then create a file with the name, `.env` and fill it using= `TOKEN=YOUR_BOT_TOKEN`
+you can change the prefix in [config.json](https://github.com/Endternvl/Music-Dyer/blob/main/config.json)
 and to start, do `node index.js` in console
 
 > © Copyright [Music-Dyer](https://github.com/Endternvl/Music-Dyer/)
